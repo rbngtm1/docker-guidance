@@ -43,7 +43,14 @@
 #### Container Lifecycle
     1 docker run = docker create + docker start
     2 ex: docker create hello world; you will see some long id
-    3 copy that id and run -- docker start -a [that long id], it gives output from that thing.
+    3 copy that id and run -- docker start [that long id] and then docker start -a [that long id], it gives output from that thing.
     4 docker run by default will show all the logs or all the information out of the container
     5 docker start is not going to show information out of the container
-    
+#### Restarting Stopped Containers
+    1 you can start the container by docker start CONTAINER_ID and docker start -a CONTAINER_ID
+#### Removing Stopped Containers
+    1 docker system prune
+#### Retrieving Log Outputs
+    1 docker logs CONTAINER_ID (Used to inspect a container and really see what's going on inside)
+#### Stopping Containers
+    1 docker stop CONTAINER_ID or docker kill CONTAINER_ID. You can do docker ps to see CONTAINER_ID.
