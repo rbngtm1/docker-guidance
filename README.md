@@ -32,4 +32,6 @@
     * run try to create and run a container
     * image name : is name of image to use for this container. 
   * Overriding Default commands
-    *
+    * ex: In docker run busybox echo hi there; you will see hi there printed on your terminal.
+    * Whatever default command is included inside of the image is not going to be executed.
+    * ex: docker run busybox ls and docker run busybox echo hi there works fine but docker run hello-world doesn't even though it is part of docker hub because ls and echo executable are somewhere inside the folder of busybox
