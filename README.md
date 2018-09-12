@@ -39,3 +39,11 @@
     1 ps: list all the running containers
     2 docker ps: you will see headers for the table and entries for running container inside the table
     3 If you do-- docker run busybox ping google.com, and open another terminal to see docker ps; you will see running container
+    4 docker ps --all : list all containers that we have ever created
+#### Container Lifecycle
+    1 docker run = docker create + docker start
+    2 ex: docker create hello world; you will see some long id
+    3 copy that id and run -- docker start -a [that long id], it gives output from that thing.
+    4 docker run by default will show all the logs or all the information out of the container
+    5 docker start is not going to show information out of the container
+    
