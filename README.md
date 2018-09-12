@@ -12,11 +12,17 @@
     * Running program on your computer issues request to kernel to interact with a piece of hardware like CPU, Memory and Hard Drive. 
     * The hardware can be segmented by using namespacing; kernel will help to figure out the request and direct that call to desired segment in hardware.
       * Namespacing is not only used for segmenting hardware, it can be used for software elements as well. Forex: we can namespace a process to restrict the area of harddrive, network, interprocess communication and users.
-      * Control Group is used to limit the amount of resource used per process.
+      * Control Group is used to limit the amount of resource used per process. Note; Namespacing and control group belong to linux, not to windows not to MacOS. 
       * For instance: Namespacing is for saying this area of harddrive is for certain process. Control group can be used to limit the amout of "memory, CPU Usage, HD I/O, Network Bandwith" that the process can use
+   * The entire running process plus the segment of the resource that it can talk to is what we refer to as a container. 
+   * Container simply is a process or the group of processes that have grouping of resources specifically assigned to it.
+   * **How does image create a container**
+     * If we have image that contains file snapshot and startup command, the file snapshot is taken in the hard drive. In this case, if startup command is executed, the new instance of the process is created as running process and that created process is isolated to set of resouces in the file snapshot stored in hard drive. This is how images is taken into as run container. 
 #### After installing, run docker version to see if it's installed correctly
 ### Using Docker Client (CLI)
   * Docker client communicates with docker server
   * If you run comman with docker run _____ from files within your docker hub like (hello-world, redis, busybox, etc.), The docker server will look into "Image cache". If the docker "image cache" inside your personal computer is empty, docker server will reach out to docker hub. 
   * docker hub is the repository of free public images that you can freely download and run on your personal computer. 
   * Docker server will take the file from docker hub, load it into memory, creates a container out of it, and runs a single program inside of it. 
+#### How Docker is running on your computer?
+  * When you installed docker for windows or docker for Mac, you installed a linux virtual machine. So, as long as the docker is running, you technically have linux virtual machine is running on your computer. Inside of this virtual machine is where all those containers are going to be created. Inside the virtual machine, we have linux kernel which is going to be hosting running process inside a container. It's Linux Kernel that's going to be incharge of isolating access to different hardware resources on your computer. You can see that you have different virtual machine running by typing "docker version" on terminal. 
