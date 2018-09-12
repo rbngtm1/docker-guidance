@@ -68,4 +68,17 @@
     6 keep winpty if you are in bash for windows before docker exec -it CONTAINER_ID redic-cli
     7 now you can write set myvalue 5
     8 get myvalue 
-     
+#### Getting a Command Prompt in a Container
+    1 you can run command inside of your container without having to rerun docker exec all the time
+    2 do docker ps and docker exec -it CONTAINER_ID sh
+    3 after that you can change your directory to home directory by cd ~/ or do ls 
+      or go to root directory by cd / and do ls to see root files and folders and also play aroud
+      export b=5 and then echo $b; you can also do redis-cli; if you cannot get out by control C
+      try control D or type exit.
+#### Starting with a shell
+    1 docker run -it busybox sh
+    2 you can now try ls, echo sth, ping google.com, etc. 
+#### Container Isolation 
+    1 Containers donot share data 
+    2 Forex: try docker run -it busybox sh in 2 terminal and do docker ps in 3rd, you will see 2 
+      containers but if you create a file by touch hithere in 1st, you won't see that in 2nd.
