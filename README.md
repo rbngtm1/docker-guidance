@@ -35,4 +35,7 @@
     1 ex: In docker run busybox echo hi there; you will see hi there printed on your terminal.
     2 Whatever default command is included inside of the image is not going to be executed.
     3 ex: docker run busybox ls and docker run busybox echo hi there works fine but docker run hello-world doesn't even though it is part of docker hub because ls and echo executable are somewhere inside the folder of busybox
-    
+#### Listing Running Containers
+    1 ps: list all the running containers
+    2 docker ps: you will see headers for the table and entries for running container inside the table
+    3 If you do-- docker run busybox ping google.com, and open another terminal to see docker ps; you will see running container
