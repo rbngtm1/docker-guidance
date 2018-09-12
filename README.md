@@ -30,6 +30,6 @@
   * Docker run in detail
     * docker is reference to docker client
     * run try to create and run a container
-    * <image name> : is name of image to use for this container. 
+    * image name : is name of image to use for this container. 
   * Overriding Default commands
     *
