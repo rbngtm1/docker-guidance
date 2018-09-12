@@ -28,7 +28,7 @@
   * When you installed docker for windows or docker for Mac, you installed a linux virtual machine. So, as long as the docker is running, you technically have linux virtual machine is running on your computer. Inside of this virtual machine is where all those containers are going to be created. Inside the virtual machine, we have linux kernel which is going to be hosting running process inside a container. It's Linux Kernel that's going to be incharge of isolating access to different hardware resources on your computer. You can see that you have different virtual machine running by typing "docker version" on terminal. 
 ### Manipulating Containers with the Docker Client 
 #### Docker run in detail
-    * docker is reference to docker client
+    1 docker is reference to docker client
     * run try to create and run a container
     * image name : is name of image to use for this container. 
   * Overriding Default commands
