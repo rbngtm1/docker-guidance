@@ -54,3 +54,18 @@
     1 docker logs CONTAINER_ID (Used to inspect a container and really see what's going on inside)
 #### Stopping Containers
     1 docker stop CONTAINER_ID or docker kill CONTAINER_ID. You can do docker ps to see CONTAINER_ID.
+#### Mulit-Command Containers
+    1 Note: Reddis is an inmemory data store which is very commonly used with applications.
+    2 ex: docker run redis, you can do docker run redis-cli on second terminal 
+    3 the redis-cli will not work unless you add it into a container as a running process
+    4 To execute 2nd command inside of a running container, we will do:
+      docker : reference to the client
+      exec : run another command
+      -it : allow us to provide input to the container 
+      CONTAINER_ID 
+      commannd : command to execute 
+    5 docker ps to copy redis containerid and do --docker exec -it CONTAINER_ID redis-cli
+    6 keep winpty if you are in bash for windows before docker exec -it CONTAINER_ID redic-cli
+    7 now you can write set myvalue 5
+    8 get myvalue 
+     
