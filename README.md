@@ -82,3 +82,20 @@
     1 Containers donot share data 
     2 Forex: try docker run -it busybox sh in 2 terminal and do docker ps in 3rd, you will see 2 
       containers but if you create a file by touch hithere in 1st, you won't see that in 2nd.
+### Creating a Production-Grade Workflow
+#### Flow Specifics 
+    1 the development flow process includes development, testion, deployment and its repeatition
+    2 Our development workflow is going to revolve around creating a git hub repository, this repository
+      can be deployed to outside hosting service
+    3 Try github repos for 2 branches; one for feature and another master
+    4 you can add code and make changes to update in feature branch; master will represent very clean
+      working copy of code base
+    5 Any change to master branch will automatically deployed to our hosting provider
+    6 You are going to pull down the code base on the feature branch
+    7 You will push the changes after you made some changes to the github repository to feature branch
+    8 Once you push the changes, you will create a pull request to add the changes to feature branch 
+      and merge them to the master branch. 
+    9 Let's try to set up a work flow that is automatically going to take our application and push it
+      to Travis CI. Travis CI pull down your code and run a test on your code base.
+    10 After that, Travis CI will automatically push it to AWS hosting. 
+    
