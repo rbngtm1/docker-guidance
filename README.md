@@ -111,4 +111,20 @@
     5 After that when you ls; you notice build folder is created
     6 cd build/static/js and try ls; you will see 2 file starting with main.
     7 do npm run start; you will be directed towards the localhost 3000
+#### Create a Development Docker file
+    1 on frontend folder; do code . to open visual studio code
+    Inside Docker file: FROM node:alpine
+                        WORKDIR '/app'
+                        COPY package.json .
+                        RUN npm install
+                        COPY . .
+                        CMD ["npm", "run", "start"]
+    2 To load up the docker file and create the image; docker build -f Dockerfile.dev .
+    3 You will notice that when we just installed the create-react-app tool and used it to generate 
+      a new project. That tool automatically installed all of our dependencies into our project. 
+    4 You have 2 copies of dependencies, you can delete node_modules folder
+    5 After you fix the duplicate dependencies, your docker build -f Dockerfile.dev . will work much faster
+#### Starting the Container
+
+    
     
