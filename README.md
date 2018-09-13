@@ -125,6 +125,10 @@
     4 You have 2 copies of dependencies, you can delete node_modules folder
     5 After you fix the duplicate dependencies, your docker build -f Dockerfile.dev . will work much faster
 #### Starting the Container
-
-    
+    1 After docker buid -f Dockerfile.dev, docker run -p 3000:3000 CONTAINER_ID from earlier command 
+      you will see the development server start up
+      but you will not see the changes in webpage by change in code.  
+#### Docker Volumes 
+    1 Helps in mapping the folders inside a container with folders outside a container 
+    2 Try docker run -p 3000:3000 -v $(pwd):/app CONTAINER_ID
     
