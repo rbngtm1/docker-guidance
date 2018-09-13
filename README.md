@@ -98,4 +98,17 @@
     9 Let's try to set up a work flow that is automatically going to take our application and push it
       to Travis CI. Travis CI pull down your code and run a test on your code base.
     10 After that, Travis CI will automatically push it to AWS hosting. 
+#### Project Generation
+    1 try node -v on your terminal, if you don't have it install
+    2 do npm install -g create-react-app on your terminal 
+    3 try create-react-app frontend
+    4 go inside frontend folder by cd frontend
+#### Necessary Commands
+    1 npm run start: starts up a development server. For development use only
+    2 npm test run: runs test associated with the project
+    3 npm run build: Builds a production version of the application 
+    4 in frontend folder; try npm run test and then npm run build 
+    5 After that when you ls; you notice build folder is created
+    6 cd build/static/js and try ls; you will see 2 file starting with main.
+    7 do npm run start; you will be directed towards the localhost 3000
     
