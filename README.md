@@ -130,5 +130,7 @@
       but you will not see the changes in webpage by change in code.  
 #### Docker Volumes 
     1 Helps in mapping the folders inside a container with folders outside a container 
-    2 Try docker run -p 3000:3000 -v $(pwd):/app CONTAINER_ID
+    2 Try docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app CONTAINER_ID
+    
+    
     
