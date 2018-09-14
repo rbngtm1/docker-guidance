@@ -131,6 +131,10 @@
 #### Docker Volumes 
     1 Helps in mapping the folders inside a container with folders outside a container 
     2 Try docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app CONTAINER_ID
+#### Shorthand with Docker Compose
+    1 The docker compose makes the docker run easier 
+    2 docker run IMAGE_ID not docker run CONTAINER_ID; RUN: create a new container of an image
+    3 docker stop CONTAINER_ID and relaunch with docker start CONTAINER_ID; START: Starts a container
     
     
     
