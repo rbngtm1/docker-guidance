@@ -1,0 +1,3 @@
+sudo usermod -a -G docker ubuntu
+sudo systemctl start docker
+tagging -- docker build -t myalpine:v1 .
