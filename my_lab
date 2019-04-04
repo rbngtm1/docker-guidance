@@ -1,0 +1,28 @@
+1. Make a docker file
+   FROM alpine
+   LABEL owner="RG"
+   LABEL description="Mydockerimage"
+   COPY abc.txt /opt/abc.txt
+   
+2. Now Create an image with, docker build .
+3. Now When You run docker images, you see 2 created: coz one is base image
+4. Now let's tag the image that got created with docker build -t myalpine:v1 .  
+5. When you do docker images, myalpine is repo name and v1 is tag name
+6. let's add CMD ["ls"] in the docker file and run docker build -t myalpine:v2 .
+7. let's do docker run myalpine:v2, this will show directories inside an image
+8. Let's make a new dockerfile with dockerfile1  name by cp Dockerfile Dockerfile1 command
+8.5 Make changes in CMD command let's do CMD ["ls", "/opt"]
+9. Now docker build -t myalpine:v3 . will not work unless you pass parameter. follow below command
+10. docker build -t myalpine:v3 -f Dockerfile1 .
+11. docker images, see you will have now v3 tag image and can run sth like docker run myalpine:v3
+12. Let's see the running processes with docker ps command 
+13. You can see that nothing is being running, coz we don't have any running processes.
+14. If you want to run the process in deamon mode then you need to change the parameters
+15. docker run -d -it myalpine:v3 sh , and run command ps -a , you see status up
+16. docker ps will only show the running process
+17. if you want only your 2 container_id's , you can run docker ps -q or docker ps | awk '{print $1}' | tail -2
+18. to stop all 2, you can do --- docker stop $(docker ps -q)
+19. docker system prune --to clean up your dead processes. do docker images (your images are there) but containers are cleaned up
+20. let's run docker run -d -it --name "Testing" myalpine:v3 sh
+21. docker ps
+22. docker exec -it (container_id) sh (now you are inside that image)
