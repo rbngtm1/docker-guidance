@@ -25,4 +25,24 @@
 19. docker system prune --to clean up your dead processes. do docker images (your images are there) but containers are cleaned up
 20. let's run docker run -d -it --name "Testing" myalpine:v3 sh
 21. docker ps
-22. docker exec -it (container_id) sh (now you are inside that image)
+22. docker exec -it (container_id) sh (now you are inside that image
+#### Mount the volume inside your container 
+1. docker run -d -it --name "VTesting" -v /home/ubuntu/docker/html:/opt/html myalpine:v3 sh
+2 -v parameter will help to mount volume, and your location where it's actually available : where you want to mount it in container
+3. let's see if it available or not
+4. docker ps
+5. docker exec -it (container_id) sh and go inside /opt -- you will see html folder and your file. 
+6. you can now make some modification to that file ,exit, docker ps, docker kill container_id, you can still see your changes in your actual file 
+7. vim Dockerfile-httpd 
+FROM httpd:2.4
+LABEL owner:"rbngtm1"
+COPY ./html/ /usr/local/apache2/htdocs/
+8. docker build -t myhttpd:v1 -f Dockerfile-httpd .
+9. docker run -d -it --name mywebsite -p 8080:80 myhttpd:v1
+10. docker ps (it's up and running) (try your iP:8080)
+#### Push docker images
+1. docker login (will take you to docker hub) (but you will be storing in registary in private env like docker login registry.mycompany.)
+2. but for testing purpose, let's just do docker login, keep your username and passwd
+3. docker images
+4. docker tag myhttpd:v1 reponamedockerhub/myhttpd:v1
+5. docker push myhttpd:v1 reponamedockerhub/myhttpd:v1
