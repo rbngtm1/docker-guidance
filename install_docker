@@ -1,0 +1,7 @@
+Install in RHEL 
+https://turreta.com/2017/08/17/install-docker-in-red-hat-enterprise-linux-and-aws-ec2/
+plus Add the ec2-user to the docker group so you can execute Docker commands without using sudo
+sudo usermod -a -G docker ec2-user
+
+Install in Amazon Linux 2
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
