@@ -10,3 +10,9 @@
   * If you want to access the redis image directly from docker hub, you may do--> docker run redis
 #### COPY 
   * COPY ./ ./ {Path to folder from your machine && place to copy stuff to inside the container}
+#### tagging a container
+  * If we build a custom image by modifying a base image, we will use docke build . after making changes in Docker file
+  * Then we will run our image using docker run <container id> created by docker build .
+  * But there is a alternate to that, you can create a tag by something like this:
+  * docker build -t robingautam/simpleweb .  {Here simpleweb is the working directory}
+  * Then we can run our image by docker run robingautam/simpleweb
