@@ -14,5 +14,5 @@
   * If we build a custom image by modifying a base image, we will use docke build . after making changes in Docker file
   * Then we will run our image using docker run <container id> created by docker build .
   * But there is a alternate to that, you can create a tag by something like this:
-  * docker build -t robingautam/simpleweb .  {Here simpleweb is the working directory}
+  * docker build -t robingautam/simpleweb .  {Here simpleweb is the working directory}{you don't need to specify :latest because by default it takes latest}
   * Then we can run our image by docker run robingautam/simpleweb
