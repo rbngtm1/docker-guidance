@@ -16,3 +16,5 @@
   * But there is a alternate to that, you can create a tag by something like this:
   * docker build -t robingautam/simpleweb .  {Here simpleweb is the working directory}{you don't need to specify :latest because by default it takes latest}
   * Then we can run our image by docker run robingautam/simpleweb
+#### add stdin for the image build by docker file
+  * docker exec -it eefkkdk234 sh
