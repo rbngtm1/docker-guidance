@@ -18,3 +18,7 @@
   * Then we can run our image by docker run robingautam/simpleweb
 #### add stdin for the image build by docker file
   * docker exec -it eefkkdk234 sh
+#### Steps
+  * docker build -t robingautam/simpleweb .
+  * docker run -p 8080:8080 robingautam/simpleweb
+  * In another terminal, docker ps , and docker exec -it <container-id> sh
