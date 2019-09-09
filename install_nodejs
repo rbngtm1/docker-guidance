@@ -3,3 +3,6 @@
  curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
  sudo yum install nodejs -y
  node -v
+=====================================
+sudo npm install npx
+npx create-react-app client
