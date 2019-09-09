@@ -25,3 +25,9 @@
 #### Installing docker compose
   * sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   * sudo chmod +x /usr/local/bin/docker-compose
+#### stopping containers
+  * docker run -d <container-id> or docker-compose up -d
+  * docker-compose down (to stop containers) or docker stop(container-id)
+#### Docker compose
+  * docker-compose up
+  * if you make changes inside docker-compose.yml then, docker-compose up --build
