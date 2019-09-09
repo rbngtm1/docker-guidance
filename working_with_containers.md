@@ -33,3 +33,6 @@
   * if you make changes inside docker-compose.yml then, docker-compose up --build
 #### Build giving a custom name for docker file
   * docker build -f {dockerfile.dev} .
+#### Docker volumes
+  * Setting up the mapping between files or folder inside a docker container to files or foler in local folder
+  * docker run -p 3000:3000 -v /app/node_modules <here this is just a placeholder for folder inside a container> -v $(pwd):/app <image-id>
