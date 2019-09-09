@@ -31,3 +31,5 @@
 #### Docker compose
   * docker-compose up
   * if you make changes inside docker-compose.yml then, docker-compose up --build
+#### Build giving a custom name for docker file
+  * docker build -f {dockerfile.dev} .
