@@ -3,6 +3,14 @@
  curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
  sudo yum install nodejs -y
  node -v
+ 
+ 
+ ## To download stable or latest version
+ sudo npm install n -g
+sudo n stable
+sudo n latest
+and export the path by PATH=$PATH:/usr/local/bin/node into bashrc
+source .bashrc
 =====================================
 
 npx create-react-app client
